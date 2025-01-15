@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+</head>
+<body>
+    <h1>게시글 목록</h1>
+
+    <!-- 게시글 목록 출력 -->
+    <ul>
+        {% for post in page_posts %}
+            <li>{{ post.title }}</li>  <!-- 게시글 제목 -->
+        {% endfor %}
+    </ul>
+
+    <!-- 페이지네이션 -->
+    <div class="pagination">
+        {% if page > 1 %}
+            <a href="{{ url_for('index', page=1) }}">첫 페이지</a>
+            <a href="{{ url_for('index', page=page-1) }}">이전</a>
+        {% endif %}
+        
+        <span>Page {{ page }} of {{ total_pages }}</span>
+        
+        {% if page < total_pages %}
+            <a href="{{ url_for('index', page=page+1) }}">다음</a>
+            <a href="{{ url_for('index', page=total_pages) }}">마지막 페이지</a>
+        {% endif %}
+    </div>
+</body>
+</html>
