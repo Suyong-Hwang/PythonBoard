@@ -10,7 +10,11 @@ manager = DBManager()
 
 app.secret_key = 'your-secret-key'  # 비밀 키 설정, 실제 애플리케이션에서는 더 안전한 방법으로 설정해야 함
 
+
+#디텍토리생성
 #디렉토리 생성
+
+
 # 로그인 필수 데코레이터
 def login_required(f):
     @wraps(f)
