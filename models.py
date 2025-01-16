@@ -6,7 +6,7 @@ class DBManager:
     def __init__(self):
         self.connection = None
         self.cursor = None
-    
+    #디렉토리 생성
     def connect(self): 
         try :
             self.connection = mysql.connector.connect(
