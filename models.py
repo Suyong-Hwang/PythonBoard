@@ -11,7 +11,7 @@ class DBManager:
         try :
             self.connection = mysql.connector.connect(
                 host = "localhost",
-                user = "suyong",
+                user = "root",
                 password="1234",
                 database="board_db3",
                 charset="utf8mb4"
