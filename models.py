@@ -13,7 +13,7 @@ class DBManager:
                 host = "localhost",
                 user = "root",
                 password="1234",
-                database="board_db3",
+                database="board_db2",
                 charset="utf8mb4"
             )
             self.cursor = self.connection.cursor(dictionary=True)
