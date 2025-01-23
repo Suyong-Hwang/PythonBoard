@@ -10,8 +10,8 @@ class DBManager:
     def connect(self): 
         try :
             self.connection = mysql.connector.connect(
-                host = "localhost",
-                user = "root",
+                host = "10.0.66.4",
+                user = "suyong",
                 password="1234",
                 database="board_db2",
                 charset="utf8mb4"
